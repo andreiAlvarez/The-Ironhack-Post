@@ -1,62 +1,47 @@
-// import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-// import NewsArticle from "./NewsArticle";
-// import NewsApi from "../services/NewsApi";
+import React from "react";
+import { useParams } from "react-router-dom";
+import NewsArticle from "./NewsArticle";
 
-// export default function Category(props) {
-//   let { categ, term } = useParams();
-//   const [news, setNews, setSelectedNews ] = useState([]);
-//   const newsApi = new NewsApi();
-//   console.log(categ);
+export default function Category(props) {
+  console.log(props);
+  let { categ, term } = useParams();
+  const data = require("../data.json");
+  console.log(categ);
 
+  const dataFilter = () => data.filter((item) => item.category === categ);
+  console.log(dataFilter());
+  const dataFiltered = dataFilter();
 
-//   useEffect(() => {
-//     if (categ) {
-//       newsApi.getNewsByCategory(categ).then((resp) => {
-//         console.log("RESPONSE", resp.data.articles);
-//         setNews(resp.data.articles);
-//       });
-//     }
+  const renderTerm = () => {
+    let label = "";
 
-//     if (term) {
-//       newsApi.search(term).then((resp) => {
-//         console.log("RESPONSE", resp.data.articles);
-//         setNews(resp.data.articles);
-//       });
-//     }
-//     // eslint-disable-next-line
-//   }, []);
+    if (categ) {
+      label = `Category ${categ}`;
+    }
 
-//   const renderTerm = () => {
-//     let label = "";
+    if (term) {
+      label = `Search by ${term}`;
+    }
 
-//     if (categ) {
-//       label = `Category ${categ}`;
-//     }
+    return label;
+  };
 
-//     if (term) {
-//       label = `Search by ${term}`;
-//     }
-
-//     return label;
-//   };
-
-//   return (
-//     <div>
-//       <h2 className="category-upper">{renderTerm()}:</h2>
-//       <div className="all__news">
-//         {news
-//           ? news.map((item) => (
-//               <NewsArticle
-//                 data={item}
-//                 key={item.url}
-//                 {...props}
-//                 setSelectedNews={setSelectedNews}
-//               />
-//             ))
-//           : "Loading"}
-//         <hr className="cover-lines"></hr>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h2 className="category-upper">{renderTerm()}:</h2>
+      <div className="all__news">
+        {dataFilter
+          ? dataFiltered.map((item) => (
+              <NewsArticle
+                data={item}
+                key={item.url}
+                {...props}
+                setSelectedNews={data}
+              />
+            ))
+          : "Loading"}
+        <hr className="cover-lines"></hr>
+      </div>
+    </div>
+  );
+}
