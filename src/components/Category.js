@@ -4,9 +4,8 @@ import NewsArticle from "./NewsArticle";
 
 export default function Category(props) {
   console.log(props);
-  let { categ, term } = useParams();
+  let { categ } = useParams();
   const data = require("../data.json");
-  console.log(categ);
 
   const dataFilter = () => data.filter((item) => item.category === categ);
   console.log(dataFilter());
@@ -18,11 +17,6 @@ export default function Category(props) {
     if (categ) {
       label = `Category ${categ}`;
     }
-
-    if (term) {
-      label = `Search by ${term}`;
-    }
-
     return label;
   };
 

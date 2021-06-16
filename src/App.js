@@ -13,12 +13,11 @@ function App() {
     <div>
       <Header />
       <CategoriesBar />
-        <Switch>
-          <Route exact path="/" component={News} />
-          <Route path="/category/:categ" component={Category} />
-          <Route path="/search/:term" component={Category} />
-          <Route path="/details/:url" component={Details} />
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={News} />
+        <Route path="/category/:categ" component={Category} />
+        <Route path="/details/:url" component={Details} />
+      </Switch>
       <Footer />
     </div>
   );

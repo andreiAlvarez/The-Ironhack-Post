@@ -52,37 +52,6 @@ html {
   font-weight: 300;
 }
 
-.search-form {
-  height: 5.2vh;
-  background-color: 1px solid lightgray;
-  padding: 0.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 40vw;
-}
-
-.search-input {
-  width: 39vw;
-  height: 24px;
-  border: 1px solid lightgray;
-  margin: -0.5vh;
-  border-radius: 15px;
-}
-
-.search-button {
-  width: 8vw;
-  height: 4.1vh;
-  border: 1px solid lightgray;
-  margin: 0.5vh;
-  border-radius: 4vw;
-  background-color: rgb(133, 133, 235);
-  color: white;
-  position: absolute;
-  top: 12.88vh;
-  left: 55.1vw;
-}
-
 h5 {
   position: absolute;
   bottom: 7vh;
@@ -181,8 +150,6 @@ h5 {
   font-weight: 700;
 }
 
-/****** Search Results *******/
-
 .category-upper {
   margin-top: 1vh;
   margin-left: 2vw;
@@ -279,16 +246,6 @@ time {
     font-size: 2vh;
   }
 
-  .search-input {
-    height: 40px;
-    border-radius: 28px;
-    width: 23vw;
-  }
-
-  .search-form {
-    width: 22vw;
-  }
-
   .news__title {
     font-size: 4vw;
   }
@@ -297,121 +254,115 @@ time {
     font-size: 3vh;
   }
 
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .news__image {
+    width: 60vw;
   }
 
-  @media only screen and (min-width: 1024px){ 
-
-    .news__image {
-      width: 60vw;
+  .category-upper {
+    width: 60vw;
+    margin-right: 20vw;
+    margin-left: 20vw;
   }
-    .category-upper {
-      width: 60vw;
-      margin-right: 20vw;
-      margin-left: 20vw;
-    }
 
-    .news {
-      width: 60vw;
-    }
+  .news {
+    width: 60vw;
+  }
 
-    .main-menu {
-      width: 60vw;
-      margin-right: 20vw;
-      margin-left: 20vw;
-    }
+  .main-menu {
+    width: 60vw;
+    margin-right: 20vw;
+    margin-left: 20vw;
+  }
 
-    .logo  {
+  .logo {
     width: 30vw;
-    }
-    
-    .newspaper-head {
-      font-size: 3vw;
-      width: 30vw;
-    }
+  }
 
-    .date {
-      font-size: 1vw;
-      width: 11vw;
-      margin-top: 0vw;
-    }
+  .newspaper-head {
+    font-size: 3vw;
+    width: 30vw;
+  }
 
-    .search-input {
-      height: 24px;
-      width: 14vw;
-    }
+  .date {
+    font-size: 1vw;
+    width: 11vw;
+    margin-top: 0vw;
+  }
 
-    .search-form {
-      width: 14vw;
-    }
 
-    .header {
-      margin-left: 20vw;
-      margin-right: 20vw;
-      width: 60vw;
-      height: 140px;
-    }
+  .header {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
+    height: 140px;
+  }
 
-    .category-alone {
-      font-size: 14px;
-      padding: 1.5vh 2vw;
-    }
+  .category-alone {
+    font-size: 14px;
+    padding: 1.5vh 2vw;
+  }
 
-    .headlines__image {
-      width: 30vw;
-    }
+  .headlines__image {
+    width: 30vw;
+  }
 
-    .news__headlines {
-      margin-top: 3vh;
-      width: 60vw;
-      flex-direction: row;
-    }
+  .news__headlines {
+    margin-top: 3vh;
+    width: 60vw;
+    flex-direction: row;
+  }
 
-    .news__everything__headlines {
-      width: 26vw;
-      margin: 2vw;
-      font-size: 1vw;
-    }
+  .news__everything__headlines {
+    width: 26vw;
+    margin: 2vw;
+    font-size: 1vw;
+  }
 
-    .news__title__head {
-      font-size: 14px;
-      width: 26vw;
+  .news__title__head {
+    font-size: 14px;
+    width: 26vw;
   }
 
   .news__title {
     font-size: 1.5vw;
     width: 55vw;
-}
+  }
 
   .news__desc__head {
     width: 26vw;
     font-size: 14px;
-}
+  }
 
-.news__desc {
-  width: 55vw;
-  margin: 2vw;
-  font-weight: 300;
-}
-.footer {
-  width: 60vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
-}
+  .news__desc {
+    width: 55vw;
+    margin: 2vw;
+    font-weight: 300;
+  }
 
-#footer__image {
-  margin-top: 0;
-  width: 60vw;
-  height: auto;
-}
+  .footer {
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
 
-h5 {
-  bottom: 7vh;
-  left: 40vw;
-}
+  #footer__image {
+    margin-top: 0;
+    width: 60vw;
+    height: auto;
+  }
 
-.all__news {
-  width: 60vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  h5 {
+    bottom: 7vh;
+    left: 40vw;
+  }
+
+  .all__news {
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
 }
-    }
